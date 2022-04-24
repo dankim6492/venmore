@@ -21,9 +21,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install venmo_api
+        pip install python-dotenv
     - name: Run recurring Venmo(re) requests
       run: |
         python requestSpotify.py
       env:
-        VENMO_ACCESS_TOKEN: ${{secrets.VENMO_ACCESS_TOKEN}}
-        SPOTIFY_FRIENDS_USERNAMES: ${{secrets.FRIENDS_USERNAMES}}
+        ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
+        FRIEND_1: ${{secrets.FRIEND_1}}
+        FRIEND_2: ${{secrets.FRIEND_2}}
+        FRIEND_3: ${{secrets.FRIEND_3}}
+        FRIEND_4: ${{secrets.FRIEND_4}}
+        FRIEND_5: ${{secrets.FRIEND_5}}
+        
