@@ -10,7 +10,7 @@ def get_month():
 
 def generate_env_list(friends_num):
     env_var_list = ["ACCESS_TOKEN"]
-    for num in friends_num:
+    for num in range(1, friends_num+1):
         env_var_list.append("FRIEND_{}".format(num))
 
     return env_var_list
