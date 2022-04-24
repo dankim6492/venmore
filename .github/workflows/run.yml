@@ -21,6 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install venmo_api
+        pip install python-dotenv
     - name: Run recurring Venmo(re) requests
       run: |
         python requestSpotify.py
