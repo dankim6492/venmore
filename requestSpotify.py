@@ -16,12 +16,9 @@ def generate_env_list(friends_num):
     return env_var_list
 
 def get_env_val(env_var_list):
-    usernames = []
-    for var in env_var_list:
-        if var == "ACCESS_TOKEN":
-            access_token = os.getenv(var)
-        else:
-            usernames.append(os.getenv(var))
+
+    acess_token = os.getenv(env_var_list[0])
+    usernames = map(lambda var: os.getenv(var), env_var_list[1:])
     
     return access_token, usernames
 
